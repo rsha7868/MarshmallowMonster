@@ -8,12 +8,12 @@ public class MonsterDisplay
 	{
 		JOptionPane.showMessageDialog(null, textToDisplay);
 	}
-	public String getResponse(String queston ToDisplay)
+	public String getResponse(String questonToDisplay)
 	{
 		String answer = "";
 		
 		answer += JOptionPane.showInputDialog(null, questonToDisplay);
-		Return answer;
+		return answer;
 	}
 }
 
