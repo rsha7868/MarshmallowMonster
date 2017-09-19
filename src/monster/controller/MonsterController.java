@@ -2,8 +2,15 @@ package monster.controller;
 import java.util.Scanner;
 
 import monster.model.MarshmallowMonster;
+import monster.view.MonsterDisplay;
 public class MonsterController
+
+private MonsterDisplay popup;
+public MonsterController()
 {
+	popup = new MonsterDisplay();
+}
+
 	public void start()
 	{
 		MarshmallowMonster basic = new MarshmallowMonster();
@@ -11,7 +18,7 @@ public class MonsterController
 		MarshmallowMonster fred = new MarshmallowMonster("Silly Fred Monster" ,7,3,6.7, true);
 		System.out.println(fred);
 		System.out.println("I am feeling hungry, I am going to ea one of Fred's arms");
-		fred.setArmCount(fred.getarmCount() - 1);
+		//fred.setArmCount(fred.getArmCount() - 1);
 		System.out.println(fred);
 		interactWithMonster(fred);
 	}
@@ -20,30 +27,30 @@ public class MonsterController
 		Scanner myScanner = new Scanner(System.in);
 		System.out.println(currentMonster.getName() + " want to know how many eyes you want to eat, please type in how many");
 		int consumed = myScanner.nextInt();
-		currentMonster.setEyeCount(currentMonster.getEyeCount()-consumed);
+		//currentMonster.setEyeCount(currentMonster.getEyeCount()-consumed);
 		System.out.println(currentMonster);
 
-		System.out.printl("how many arms are you interested in eating?, I have" + currentMonster.getArmCount());
+		//System.out.printl("how many arms are you interested in eating?, I have" + currentMonster.getArmCount());
 		//Consumed = my Scanner.nextInt();
-		int armEat = myScanner.Int();
+		//int armEat = myScanner.Int();
 		
-		if(armEat == 0)
+		//if(armEat == 0)
 		{
 			System.out.println("Not hungry? oh so sad...");
 		}
-		else if(armEat < 0)
+		//else if(armEat < 0)
 		{
 			System.out.println("Reality is hard for you - It is impossible to eat negative amount");
 		}
-		else if(armEat > currentMonster.getArmCount())
+		//else if(armEat > currentMonster.getArmCount())
 		{
 			System.out.println("You aree not allowed to eat more than exist on me :/ :X");
 		}
 	
-		else
+		//else
 		{
-			currentMonster.setArmCount(currentMonster.getArmCount() - armEat);
-			System.out.println("OK, now I have this amny arms" + currentMonster.getArmCount);
+			//currentMonster.setArmCount(currentMonster.getArmCount() - armEat);
+			//System.out.println("OK, now I have this amny arms" + currentMonster.getArmCount);
 			
 		}
 		if(EyeEat == 0)
@@ -59,6 +66,9 @@ public class MonsterController
 			currentMonster.setEyeCount(currentMonster.getEyeCount() - eyeEat);
 			System.out.println("Stop grabing my eyes" + currentMonster.getEyeCount());
 		}
+		popup.displayText("Hi there ready to play???");
+		String answer = popup.getResponse("What is the airspeed of a coconut laden swallow?");
+		
 		myScanner.close();
 	}
 }
