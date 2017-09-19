@@ -35,7 +35,7 @@ public class MonsterController
 		{
 			System.out.println("Reality is hard for you - It is impossible to eat negative amount");
 		}
-		Else if(armEat > currentMonster.getArmCount())
+		else if(armEat > currentMonster.getArmCount())
 		{
 			System.out.println("You aree not allowed to eat more than exist on me :/ :X");
 		}
@@ -45,6 +45,19 @@ public class MonsterController
 			currentMonster.setArmCount(currentMonster.getArmCount() - armEat);
 			System.out.println("OK, now I have this amny arms" + currentMonster.getArmCount);
 			
+		}
+		if(EyeEat == 0)
+		{
+			System.out.println("I cant see. Wait? Who is that...");
+		}
+		else if(eyeEat < 0)
+		{
+			System.out.println("I'm being hunted by Humans but have to little of eyes, Oh no...");
+		}
+		else
+		{
+			currentMonster.setEyeCount(currentMonster.getEyeCount() - eyeEat);
+			System.out.println("Stop grabing my eyes" + currentMonster.getEyeCount());
 		}
 		myScanner.close();
 	}

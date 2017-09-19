@@ -31,7 +31,7 @@ public class MarshmallowMonster
 	{
 		return eyeCount;
 	}
-	public double get tentacleAmount;
+	public double tentacleAmount()
 	{
 		return tentacleAmount;
 	}
