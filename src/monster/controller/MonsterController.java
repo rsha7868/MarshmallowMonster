@@ -12,23 +12,24 @@ public class MonsterController
 
 
 private MonsterDisplay popup;
-//Helper methods
+Helper methods
 private boolean isValidInteger(String sample)
 {
-	boolean valid = false;
-	try
+	//boolean valid = false;
+	//try
 	{
-		Integer.parseInt(sample);
-		valid = true;
+	//	Integer.parseInt(sample);
+	//	valid = true;
 	}
-	catch(NumberFormatException error)
-	{
-		popup.displayText("you need to input an int, " + sample+ " is not valid.");
+	//catch(NumberFormatException error)
+	//{
+		//popup.displayText("You need to input an int, " + sample + " is not valid.");
 	}
 
 public MonsterController()
 {
 	popup = new MonsterDisplay();
+	int consumed = 0;
 }
 
 	public void start()
@@ -53,10 +54,15 @@ public MonsterController()
 		
 		
 		String Response = popup.getResponse(" want to know how many eyes you want to eat, please type in how many");
-		consumed = Interger.parseInt(response);
-		int consumed = myScanner.nextInt();
+		//if(isValidInteger(response))
+		{
+		//	consumed = Integer.parseInt(response);
+		}
+		
+		//int consumed = myScanner.nextInt();
 		//currentMonster.setEyeCount(currentMonster.getEyeCount()-consumed);
 		System.out.println(currentMonster);
+		//String answer = popup.displayText(currentMonster);
 
 		//System.out.printl("how many arms are you interested in eating?, I have" + currentMonster.getArmCount());
 		//Consumed = my Scanner.nextInt();
@@ -81,17 +87,17 @@ public MonsterController()
 			//System.out.println("OK, now I have this amny arms" + currentMonster.getArmCount);
 			
 		}
-		if(EyeEat == 0)
+		//if(EyeEat == 0)
 		{
 			System.out.println("I cant see. Wait? Who is that...");
 		}
-		else if(eyeEat < 0)
+		//else if(eyeEat < 0)
 		{
 			System.out.println("I'm being hunted by Humans but have to little of eyes, Oh no...");
 		}
-		else
+		//else
 		{
-			currentMonster.setEyeCount(currentMonster.getEyeCount() - eyeEat);
+		//	currentMonster.setEyeCount(currentMonster.getEyeCount() - eyeEat);
 			System.out.println("Stop grabing my eyes" + currentMonster.getEyeCount());
 		}
 		popup.displayText("Hi there ready to play???");
@@ -99,4 +105,24 @@ public MonsterController()
 		
 		myScanner.close();
 	}
+	double food = 0.0;
+	//String tentacleResponse = popup.getrespnse("how many examples do you want to eat? I have" + String Tentacle + "Come on arms");
+	private boolean isValidDouble(String sampleDouble)
+	{
+		boolean valid = false;
+				
+				return valid;
+	//	try
+	//	{
+		//	Double.parseDouble(sampleDouble);
+		//	valid = true;
+		}
+	//	catch(NumberFormatException error)
+{
+	//popup.displayText("You need to type in a double - " + sampleDouble + " does not matter");
+	
+	}
 }
+	//	return valid;
+	//}
+//}

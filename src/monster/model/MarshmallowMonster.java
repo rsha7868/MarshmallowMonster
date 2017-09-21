@@ -44,7 +44,8 @@ public class MarshmallowMonster
 	{
 		return armCount;
 	}
-	public void setName(String name)
+	//public void setName(String name)
+	//public set(eyecount)
 	{
 		this.eyeCount = eyeCount;
 	}
