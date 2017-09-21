@@ -4,8 +4,28 @@ import java.util.Scanner;
 import monster.model.MarshmallowMonster;
 import monster.view.MonsterDisplay;
 public class MonsterController
+{
+
+
+
+
+
 
 private MonsterDisplay popup;
+//Helper methods
+private boolean isValidInteger(String sample)
+{
+	boolean valid = false;
+	try
+	{
+		Integer.parseInt(sample);
+		valid = true;
+	}
+	catch(NumberFormatException error)
+	{
+		popup.displayText("you need to input an int, " + sample+ " is not valid.");
+	}
+
 public MonsterController()
 {
 	popup = new MonsterDisplay();
@@ -14,11 +34,13 @@ public MonsterController()
 	public void start()
 	{
 		MarshmallowMonster basic = new MarshmallowMonster();
-		System.out.println(basic);
+		//System.out.println(basic);
 		popup.displayText(basic.toString());
 		MarshmallowMonster fred = new MarshmallowMonster("Silly Fred Monster" ,7,3,6.7, true);
-		System.out.println(fred);
-		System.out.println("I am feeling hungry, I am going to ea one of Fred's arms");
+		//System.out.println(fred);
+		popup.displayText(fred.toString());
+		//System.out.println("I am feeling hungry, I am going to ea one of Fred's arms");
+		popup.displayText("I am feeling hungry, I am going to ea one of Fred's arms");
 		//fred.setArmCount(fred.getArmCount() - 1);
 		System.out.println(fred);
 		interactWithMonster(fred);
@@ -26,7 +48,12 @@ public MonsterController()
 	private void interactWithMonster(MarshmallowMonster currentMonster)
 	{
 		Scanner myScanner = new Scanner(System.in);
-		System.out.println(currentMonster.getName() + " want to know how many eyes you want to eat, please type in how many");
+		//System.out.println(currentMonster.getName() + " want to know how many eyes you want to eat, please type in how many");
+		int consuumed;
+		
+		
+		String Response = popup.getResponse(" want to know how many eyes you want to eat, please type in how many");
+		consumed = Interger.parseInt(response);
 		int consumed = myScanner.nextInt();
 		//currentMonster.setEyeCount(currentMonster.getEyeCount()-consumed);
 		System.out.println(currentMonster);
