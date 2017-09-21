@@ -15,6 +15,7 @@ public MonsterController()
 	{
 		MarshmallowMonster basic = new MarshmallowMonster();
 		System.out.println(basic);
+		popup.displayText(basic.toString());
 		MarshmallowMonster fred = new MarshmallowMonster("Silly Fred Monster" ,7,3,6.7, true);
 		System.out.println(fred);
 		System.out.println("I am feeling hungry, I am going to ea one of Fred's arms");
