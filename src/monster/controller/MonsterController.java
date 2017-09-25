@@ -12,7 +12,7 @@ public class MonsterController
 
 
 private MonsterDisplay popup;
-Helper methods
+helper methods;
 private boolean isValidInteger(String sample)
 {
 	//boolean valid = false;
