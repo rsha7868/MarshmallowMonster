@@ -66,13 +66,13 @@ public MonsterController()
 	}
 	private void interactWithMonster(MarshmallowMonster currentMonster)
 	{
-		Scanner myScanner = new Scanner(System.in);
+//		Scanner myScanner = new Scanner(System.in);
 		//System.out.println(currentMonster.getName() + " want to know how many eyes you want to eat, please type in how many");
 		int consuumed;
 		
 		
 		String Response = popup.getResponse(" want to know how many eyes you want to eat, please type in how many");
-		while(!isValidInteger(response))
+		while(!isValidInteger(Response))
 		{
 			popup.displayText("grr type in a better answer next time");
 			response = popup.getResponse("Type in a integer value!");
@@ -80,7 +80,7 @@ public MonsterController()
 		
 		
 		
-		//if(isValidInteger(response))
+		for(isValidInteger(response))
 		{
 			consumed = Integer.parseInt(response);
 		}
@@ -94,7 +94,7 @@ public MonsterController()
 		//Consumed = my Scanner.nextInt();
 		//int armEat = myScanner.Int();
 		
-		//if(armEat == 0)
+		for(armEat == 0)
 		{
 			System.out.println("Not hungry? oh so sad...");
 		}
