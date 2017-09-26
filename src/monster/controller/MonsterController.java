@@ -41,11 +41,11 @@ public MonsterController()
 //					count +=2;
 //				}
 //		
-		for(int loop = 0; loop < 10; loop += 1)
-		{
-			popup.displayText("This is loop # " + (loop + 1) + " of ten");
-		}
-		
+//		for(int loop = 0; loop < 10; loop += 1)
+//		{
+//			popup.displayText("This is loop # " + (loop + 1) + " of ten");
+//		}
+//		
 		
 		
 		
@@ -72,9 +72,17 @@ public MonsterController()
 		
 		
 		String Response = popup.getResponse(" want to know how many eyes you want to eat, please type in how many");
+		while(!isValidInteger(response))
+		{
+			popup.displayText("grr type in a better answer next time");
+			response = popup.getResponse("Type in a integer value!");
+		}
+		
+		
+		
 		//if(isValidInteger(response))
 		{
-		//	consumed = Integer.parseInt(response);
+			consumed = Integer.parseInt(response);
 		}
 		
 		//int consumed = myScanner.nextInt();
