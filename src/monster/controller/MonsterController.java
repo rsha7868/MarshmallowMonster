@@ -12,21 +12,22 @@ public class MonsterController
 
 
 private MonsterDisplay popup;
-helper methods;
-private boolean isValidInteger(String sample)
-{
-	//boolean valid = false;
-	//try
-	{
-	//	Integer.parseInt(sample);
-	//	valid = true;
-	}
-	//catch(NumberFormatException error)
-	//{
-		//popup.displayText("You need to input an int, " + sample + " is not valid.");
-	}
+//helper.methods
 
-public MonsterController()
+//private boolean isValidInteger(String sample)
+//{
+//	boolean valid = false;
+//	try
+//	{
+//		Integer.parseInt(sample);
+//		valid = true;
+//	}
+//	catch(NumberFormatException error)
+//	{
+//		popup.displayText("You need to input an int, " + sample + " is not valid.");
+//	}
+
+//public MonsterController()
 {
 	popup = new MonsterDisplay();
 	int consumed = 0;
@@ -35,17 +36,17 @@ public MonsterController()
 	public void start()
 	{
 		int count = 0;
-//				while(count < 10)
-//				{
-//					popup.displayText("Am I the best??!!");
-//					count +=2;
-//				}
-//		
-//		for(int loop = 0; loop < 10; loop += 1)
-//		{
-//			popup.displayText("This is loop # " + (loop + 1) + " of ten");
-//		}
-//		
+				while(count < 10)
+				{
+					popup.displayText("Am I the best??!!");
+					count +=2;
+				}
+		
+		for(int loop = 0; loop < 10; loop += 1)
+		{
+			popup.displayText("This is loop # " + (loop + 1) + " of ten");
+		}
+		
 		
 		
 		
@@ -72,17 +73,17 @@ public MonsterController()
 		
 		
 		String Response = popup.getResponse(" want to know how many eyes you want to eat, please type in how many");
-		while(!isValidInteger(Response))
+//		while(!isValidInteger(Response))
 		{
 			popup.displayText("grr type in a better answer next time");
-			response = popup.getResponse("Type in a integer value!");
+//			response = popup.getResponse("Type in a integer value!");
 		}
 		
 		
 		
-		for(isValidInteger(response))
+//		for(isValidInteger(response))
 		{
-			consumed = Integer.parseInt(response);
+//			consumed = Integer.parseInt(response);
 		}
 		
 		//int consumed = myScanner.nextInt();
@@ -94,25 +95,24 @@ public MonsterController()
 		//Consumed = my Scanner.nextInt();
 		//int armEat = myScanner.Int();
 		
-		for(armEat == 0)
+	for(int armEat = 0)
 		{
 			System.out.println("Not hungry? oh so sad...");
 		}
-		//else if(armEat < 0)
+		else if(armEat < 0)
 		{
 			System.out.println("Reality is hard for you - It is impossible to eat negative amount");
 		}
-		//else if(armEat > currentMonster.getArmCount())
+		else if(armEat > currentMonster.getarmCount())
 		{
 			System.out.println("You aree not allowed to eat more than exist on me :/ :X");
 		}
 	
-		//else
-		{
-			//currentMonster.setArmCount(currentMonster.getArmCount() - armEat);
-			//System.out.println("OK, now I have this amny arms" + currentMonster.getArmCount);
+		else		{			currentMonster.setArmCount(currentMonster.getArmCount() - armEat());
+		System.out.println("OK, now I have this any arms" + currentMonster.getArmCount());
 			
 		}
+		
 		//if(EyeEat == 0)
 		{
 			System.out.println("I cant see. Wait? Who is that...");
@@ -126,11 +126,14 @@ public MonsterController()
 		//	currentMonster.setEyeCount(currentMonster.getEyeCount() - eyeEat);
 			System.out.println("Stop grabing my eyes" + currentMonster.getEyeCount());
 		}
-		popup.displayText("Hi there ready to play???");
-		String answer = popup.getResponse("What is the airspeed of a coconut laden swallow?");
+		{
+			popup.displayText("Hi there ready to play???");
+			String answer = popup.getResponse("What is the airspeed of a coconut laden swallow?");
+		}
 		
-		myScanner.close();
-	}
+		
+//		myScanner.close();
+	
 	double food = 0.0;
 	//String tentacleResponse = popup.getrespnse("how many examples do you want to eat? I have" + String Tentacle + "Come on arms");
 	private boolean isValidDouble(String sampleDouble)
