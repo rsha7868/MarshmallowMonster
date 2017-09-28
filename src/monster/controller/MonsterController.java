@@ -4,12 +4,17 @@ import java.util.Scanner;
 import monster.model.MarshmallowMonster;
 import monster.view.MonsterDisplay;
 public class MonsterController
+import java.util.List;
+import java.util.ArrayList;
+
+
+
+private List<MarshmallowMonster> monsterList;
+public MonsterController()
 {
-
-
-
-
-
+	popup = new MonsterDisplay();
+	monsterList = new ArrayList<MarshmallowMonster>();
+}
 
 private MonsterDisplay popup;
 //helper.methods
@@ -64,6 +69,9 @@ private MonsterDisplay popup;
 		//fred.setArmCount(fred.getArmCount() - 1);
 		System.out.println(fred);
 		interactWithMonster(fred);
+		
+		monsterList.add(basic);
+		monsterList.add(fred);
 	}
 	private void interactWithMonster(MarshmallowMonster currentMonster)
 	{
