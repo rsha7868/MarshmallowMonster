@@ -1,11 +1,12 @@
 package monster.controller;
 import java.util.Scanner;
-
-import monster.model.MarshmallowMonster;
-import monster.view.MonsterDisplay;
-public class MonsterController
 import java.util.List;
 import java.util.ArrayList;
+import monster.model.MarshmallowMonster;
+import monster.view.MonsterDisplay;
+
+public class MonsterController
+{
 
 
 
